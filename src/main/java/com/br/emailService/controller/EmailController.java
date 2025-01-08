@@ -17,7 +17,7 @@ public class EmailController {
     @PostMapping
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequestDTO emailRequest) {
         try {
-            emailService.sendEmail(emailRequest.getTo(), emailRequest.getSubject(), emailRequest.getMessage());
+            emailService.sendEmail("gabriel_bartholo_batista@hotmail.com", emailRequest.getWhatsAppNumber(), emailRequest.getMessage());
             return ResponseEntity.ok("Email sent successfully");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error while sending email: " + e.getMessage());

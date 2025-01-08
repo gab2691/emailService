@@ -11,14 +11,18 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    public void sendEmail(String to, String subject, String message) {
+    public void sendEmail(String to, String number, String message) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(to);
-        mailMessage.setSubject(subject);
+        mailMessage.setSubject("Entre em contato com o numero : " + number);
         mailMessage.setText(message);
-        mailMessage.setFrom("your-email@gmail.com");
+        mailMessage.setFrom("fraisitzeresteticasite@gmail.com");
 
-        mailSender.send(mailMessage);
+        try {
+            mailSender.send(mailMessage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 

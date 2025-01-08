@@ -1,24 +1,24 @@
 package com.br.emailService.dto;
 
 public class EmailRequestDTO {
-    private String to;
-    private String subject;
+    private String name;
+    private String whatsAppNumber;
     private String message;
 
-    public String getTo() {
-        return to;
+    public String getName() {
+        return name;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getWhatsAppNumber() {
+        return whatsAppNumber;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setWhatsAppNumber(String whatsAppNumber) {
+        this.whatsAppNumber = whatsAppNumber;
     }
 
     public String getMessage() {
